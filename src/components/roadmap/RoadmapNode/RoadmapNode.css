@@ -1,0 +1,100 @@
+.roadmap-node {
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border-radius: 8px;
+}
+
+.roadmap-node:hover {
+  background-color: #f7f9fa;
+}
+
+.roadmap-node.current {
+  background-color: #e8f5fd;
+  border-left: 3px solid #1da1f2;
+}
+
+.roadmap-node.completed .node-title {
+  color: #17bf63;
+}
+
+.node-header {
+  display: flex;
+  align-items: center;
+  padding: 12px 10px;
+  gap: 10px;
+}
+
+.toggle-icon, .toggle-spacer {
+  width: 16px;
+  flex-shrink: 0;
+  color: #1da1f2;
+}
+
+.toggle-spacer {
+  visibility: hidden;
+}
+
+.node-title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.completed-icon {
+  color: #17bf63;
+  font-size: 0.8rem;
+}
+
+.node-icons {
+  display: flex;
+  gap: 8px;
+}
+
+.resource-icon {
+  font-size: 0.9rem;
+  color: #657786;
+  opacity: 0.8;
+}
+
+.node-description {
+  margin: 0 0 0 36px;
+  padding: 5px 10px 15px;
+  color: #657786;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.node-children {
+  margin-left: 20px;
+  padding-left: 10px;
+  border-left: 2px solid #e1e8ed;
+}
+
+/* Depth-based styling */
+.depth-1 .node-title {
+  font-weight: 500;
+}
+
+.depth-2 .node-title {
+  font-weight: 400;
+}
+
+.depth-3 .node-title {
+  font-size: 0.95rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .node-header {
+    padding: 10px 8px;
+  }
+  
+  .node-description {
+    margin-left: 26px;
+  }
+}

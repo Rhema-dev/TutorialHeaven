@@ -1,0 +1,70 @@
+.docs-link-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #17bf63;
+}
+
+.docs-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.docs-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #1da1f2;
+}
+
+.docs-icon {
+  color: #17bf63;
+  font-size: 1.2rem;
+}
+
+.docs-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #1da1f2;
+  text-decoration: none;
+  padding: 8px 12px;
+  background: #f7f9fa;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.docs-link:hover {
+  background: #e8f5fd;
+  text-decoration: underline;
+}
+
+.docs-url {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.external-icon {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.docs-tip {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  color: #657786;
+  font-style: italic;
+  padding-left: 28px;
+  position: relative;
+}
+
+.docs-tip::before {
+  content: "💡";
+  position: absolute;
+  left: 8px;
+}

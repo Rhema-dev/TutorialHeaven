@@ -1,0 +1,140 @@
+/* SearchBar.css */
+:root {
+  --twitter-bg: #15202B;
+  --twitter-bg-secondary: #1E2A38;
+  --twitter-text: #FFFFFF;
+  --twitter-text-secondary: #8899A6;
+  --twitter-accent: #1DA1F2;
+  --twitter-accent-hover: #1A91DA;
+  --twitter-border: #2F3E4A;
+  --twitter-shadow: rgba(0, 0, 0, 0.2);
+}
+
+.search-container {
+    align-self: center;
+    justify-self: center;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--twitter-bg);
+  border: 1px solid var(--twitter-border);
+  border-radius: 25px;
+  padding: 8px 15px;
+  box-shadow: 0 2px 4px var(--twitter-shadow);
+  transition: border-color 0.2s;
+}
+
+.sach-input{
+    background: transparent;
+  border: none;
+  color: var(--twitter-text);
+  font-size: 1rem;
+  width: 100%;
+  outline: none;
+}
+.search-input-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--twitter-text-secondary);
+  transition: fill 0.2s;
+}
+
+
+
+.search-input {
+  
+}
+
+.search-input::placeholder {
+  color: var(--twitter-text-secondary);
+  font-size: 0.95rem;
+}
+
+.search-button {
+  background-color: var(--twitter-accent);
+  color: var(--twitter-text);
+  border: none;
+  border-radius: 20px;
+  padding: 8px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.search-button:hover {
+  background-color: var(--twitter-accent-hover);
+}
+
+/* Styles for commented-out quick searches */
+.quick-searches {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  color: var(--twitter-text-secondary);
+  font-size: 0.9rem;
+}
+
+.quick-search-chip {
+  background-color: var(--twitter-bg-secondary);
+  color: var(--twitter-text);
+  border: 1px solid var(--twitter-border);
+  border-radius: 15px;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.quick-search-chip:hover {
+  background-color: var(--twitter-bg);
+  border-color: var(--twitter-accent);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .search-container {
+    justify-self: center;
+    padding: 8px;
+  }
+
+  .search-form {
+    padding: 6px 12px;
+  }
+
+  .search-input {
+    font-size: 0.95rem;
+  }
+
+  .search-button {
+    padding: 6px 15px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-container {
+    padding: 5px;
+    justify-self: center;
+  }
+
+  .search-form {
+    border-radius: 20px;
+  }
+
+  .search-icon {
+    width: 18px;
+    height: 18px;
+  }
+}

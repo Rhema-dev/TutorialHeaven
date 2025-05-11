@@ -1,0 +1,192 @@
+.project-generator {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+}
+
+.project-generator.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.project-generator.empty {
+  text-align: center;
+  padding: 30px;
+  color: #657786;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(29, 161, 242, 0.2);
+  border-top-color: #1da1f2;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #e1e8ed;
+  padding-bottom: 12px;
+}
+
+.project-header h3 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #1da1f2;
+}
+
+.project-icon {
+  font-size: 1.2rem;
+}
+
+.beginner-icon {
+  color: #17bf63;
+}
+
+.intermediate-icon {
+  color: #f39c12;
+}
+
+.advanced-icon {
+  color: #e0245e;
+}
+
+.custom-icon {
+  color: #1da1f2;
+}
+
+.project-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.generate-btn, .save-btn {
+  background: #f7f9fa;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #1da1f2;
+}
+
+.generate-btn:hover {
+  background: #e8f5fd;
+  transform: rotate(15deg);
+}
+
+.save-btn:hover {
+  background: #e8f5fd;
+}
+
+.save-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  color: #17bf63;
+}
+
+.project-content {
+  margin-bottom: 20px;
+}
+
+.project-description {
+  color: #14171a;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.project-requirements, .project-resources {
+  margin-top: 16px;
+}
+
+.project-requirements h4, .project-resources h4 {
+  color: #1da1f2;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.project-requirements ul, .project-resources ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.project-requirements li {
+  background: #f7f9fa;
+  display: inline-block;
+  padding: 4px 12px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  border-radius: 16px;
+  font-size: 0.9rem;
+  color: #14171a;
+}
+
+.project-resources li {
+  margin-bottom: 8px;
+}
+
+.project-resources a {
+  color: #1da1f2;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.project-resources a:hover {
+  text-decoration: underline;
+}
+
+.external-icon {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.saved-projects {
+  border-top: 1px solid #e1e8ed;
+  padding-top: 16px;
+}
+
+.saved-projects h4 {
+  color: #657786;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.saved-projects ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.saved-projects li {
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+}
+
+.saved-projects li:hover {
+  background: #f7f9fa;
+  color: #1da1f2;
+}

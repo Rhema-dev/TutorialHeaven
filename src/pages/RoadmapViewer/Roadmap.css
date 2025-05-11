@@ -1,0 +1,411 @@
+/* Roadmap.css - Improved Version */
+:root {
+  /* Color Palette */
+  --twitter-bg: #15202B;
+  --twitter-bg-secondary: #1E2A38;
+  --twitter-text: #FFFFFF;
+  --twitter-text-input: #000000;
+  --twitter-text-secondary: #8899A6;
+  --twitter-accent: #1DA1F2;
+  --twitter-accent-hover: #1A91DA;
+  --twitter-border: #2F3E4A;
+  --twitter-shadow: rgba(0, 0, 0, 0.2);
+  
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  
+  /* Typography */
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 2rem;
+  --text-3xl: 2.5rem;
+  
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  
+  /* Transitions */
+  --transition-fast: 0.15s;
+  --transition-normal: 0.3s;
+  --transition-slow: 0.5s;
+}
+
+/* Base Styles */
+.roadmap-container {
+  width: min(90vw, 1400px); /* Better responsive max-width */
+  margin: 0 auto;
+  padding: var(--space-xl);
+  background-color: var(--twitter-bg);
+  color: var(--twitter-text);
+  min-height: 100vh;
+}
+
+/* Header Section */
+.roadmap-header {
+  margin-bottom: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  background-color: var(--twitter-bg-secondary);
+  color: var(--twitter-text);
+  border: 1px solid var(--twitter-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-xs) var(--space-sm);
+  font-size: var(--text-lg);
+  cursor: pointer;
+  transition: all var(--transition-fast) ease;
+  width: fit-content;
+}
+
+.back-button:hover {
+  background-color: var(--twitter-bg);
+  color: var(--twitter-accent);
+  border-color: var(--twitter-accent);
+}
+
+.roadmap-header h1 {
+  font-size: var(--text-3xl);
+  color: var(--twitter-text);
+  margin: var(--space-sm) 0;
+  line-height: 1.2;
+}
+
+.roadmap-description {
+  font-size: var(--text-lg);
+  color: var(--twitter-text-secondary);
+  line-height: 1.5;
+  max-width: 80ch;
+}
+
+/* Search Container */
+.search-container {
+  margin-bottom: var(--space-xl);
+}
+
+/* Main Content Layout */
+.roadmap-content {
+  display: grid;
+  grid-template-columns: minmax(300px, 2fr) 3fr;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+/* Tree Navigation */
+.roadmap-tree {
+  background-color: var(--twitter-bg-secondary);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  box-shadow: 0 2px 8px var(--twitter-shadow);
+  position: sticky;
+  top: var(--space-xl);
+  max-height: calc(100vh - var(--space-xl) * 2);
+  overflow-y: auto;
+}
+
+.roadmap-node {
+  margin-bottom: var(--space-sm);
+  padding-left: calc(var(--space-md) * var(--depth, 0));
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+  border-radius: var(--radius-sm);
+}
+
+.roadmap-node:hover {
+  background-color: var(--twitter-bg);
+}
+
+.node-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-xs) var(--space-sm);
+}
+
+.toggle-icon, .toggle-spacer {
+  width: 22px;
+  height: 22px;
+  color: var(--twitter-text-secondary);
+  flex-shrink: 0;
+}
+
+.node-title {
+  font-size: var(--text-lg);
+  color: var(--twitter-text);
+  flex: 1;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.node-icons {
+  display: flex;
+  gap: var(--space-xs);
+}
+
+.resource-icon {
+  color: var(--twitter-accent);
+  font-size: var(--text-base);
+}
+
+.node-description {
+  font-size: var(--text-sm);
+  color: var(--twitter-text-secondary);
+  margin: var(--space-xs) 0 0 calc(var(--space-md) + 22px);
+  line-height: 1.5;
+}
+
+.node-children {
+  margin-top: var(--space-sm);
+  border-left: 1px solid var(--twitter-border);
+  margin-left: 11px; /* Half of icon width */
+}
+
+.current {
+  border-left: 4px solid var(--twitter-accent);
+  background-color: var(--twitter-bg);
+}
+
+/* Resources Section */
+.roadmap-resources {
+  background-color: var(--twitter-bg-secondary);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  box-shadow: 0 2px 8px var(--twitter-shadow);
+}
+
+.current-topic-header {
+  margin-bottom: var(--space-lg);
+}
+
+.current-topic-header h2 {
+  font-size: var(--text-2xl);
+  color: var(--twitter-text);
+  margin-bottom: var(--space-sm);
+  line-height: 1.3;
+}
+
+.topic-description {
+  font-size: var(--text-base);
+  color: var(--twitter-text-secondary);
+  display: flex;
+  gap: var(--space-xs);
+  line-height: 1.6;
+}
+
+.description-icon {
+  color: var(--twitter-accent);
+  flex-shrink: 0;
+  margin-top: 0.25em;
+}
+
+.select-topic-prompt {
+  text-align: center;
+  color: var(--twitter-text-secondary);
+  font-size: var(--text-lg);
+  padding: var(--space-xl);
+}
+
+/* Practice Now Banner */
+.practice-now-banner {
+  background-color: var(--twitter-bg-secondary);
+  border-radius: var(--radius-sm);
+  padding: var(--space-lg);
+  margin-bottom: var(--space-lg);
+  box-shadow: 0 2px 8px var(--twitter-shadow);
+  border: 1px solid var(--twitter-accent);
+}
+
+.practice-now-banner h3 {
+  color: var(--twitter-text);
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-xs);
+}
+
+.practice-now-banner p {
+  color: var(--twitter-text-secondary);
+  font-size: var(--text-base);
+  margin-bottom: var(--space-md);
+  line-height: 1.5;
+}
+
+.practice-now-banner button {
+  background-color: var(--twitter-accent);
+  color: var(--twitter-text-input);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: var(--space-xs) var(--space-md);
+  cursor: pointer;
+  font-size: var(--text-base);
+  font-weight: 600;
+  transition: background-color var(--transition-fast);
+}
+
+.practice-now-banner button:hover {
+  background-color: var(--twitter-accent-hover);
+}
+
+/* Loading State */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  color: var(--twitter-text-secondary);
+  gap: var(--space-md);
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid var(--twitter-bg-secondary);
+  border-top: 5px solid var(--twitter-accent);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .roadmap-container {
+    width: 95vw;
+    padding: var(--space-lg);
+  }
+
+  .roadmap-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .roadmap-tree {
+    position: static;
+    max-height: none;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --space-xl: 2rem;
+    --space-lg: 1.5rem;
+    --space-md: 1rem;
+  }
+
+  .roadmap-header h1 {
+    font-size: var(--text-2xl);
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --space-xl: 1.5rem;
+  }
+
+  .roadmap-container {
+    padding: var(--space-md);
+  }
+
+  .roadmap-header h1 {
+    font-size: var(--text-xl);
+  }
+
+  .node-title {
+    font-size: var(--text-base);
+  }
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion) {
+  .spinner {
+    animation: none;
+    border-top-color: transparent;
+  }
+  
+  .back-button,
+  .roadmap-node,
+  .practice-now-banner button {
+    transition: none;
+  }
+}
+
+/* Focus Styles */
+button:focus-visible,
+.roadmap-node:focus-visible {
+  outline: 2px solid var(--twitter-accent);
+  outline-offset: 2px;
+}
+/* Scrollbar Styles */
+.roadmap-tree::-webkit-scrollbar,
+.roadmap-resources::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.roadmap-tree::-webkit-scrollbar-track,
+.roadmap-resources::-webkit-scrollbar-track {
+  background: var(--twitter-bg-secondary);
+  border-radius: 4px;
+}
+
+.roadmap-tree::-webkit-scrollbar-thumb,
+.roadmap-resources::-webkit-scrollbar-thumb {
+  background: var(--twitter-border);
+  border-radius: 4px;
+}
+
+.roadmap-tree::-webkit-scrollbar-thumb:hover,
+.roadmap-resources::-webkit-scrollbar-thumb:hover {
+  background: var(--twitter-accent);
+}
+
+/* For Firefox */
+.roadmap-tree,
+.roadmap-resources {
+  scrollbar-width: thin;
+  scrollbar-color: var(--twitter-border) var(--twitter-bg-secondary);
+}
+
+/* Enhanced Tree Styling */
+.roadmap-tree {
+  scroll-behavior: smooth;
+  overscroll-behavior: contain;
+}
+
+/* Smooth scrolling for the entire page */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Additional Improvements */
+.roadmap-node {
+  scroll-margin: var(--space-sm); /* Better scroll-into-view behavior */
+}
+
+/* Current node highlight */
+.current {
+  box-shadow: inset 3px 0 0 var(--twitter-accent);
+  background-color: color-mix(in srgb, var(--twitter-accent) 8%, transparent);
+}
+
+/* Better focus styles */
+.roadmap-node:focus-within {
+  outline: 2px solid var(--twitter-accent);
+  outline-offset: 2px;
+}

@@ -1,0 +1,261 @@
+/* Use same variables as Roadmap.css and resource-card */
+:root {
+  --twitter-bg: #0F1419; /* Deep black-gray */
+  --twitter-bg-secondary: #1A2028; /* Slightly lighter for panels */
+  --twitter-text: #FFFFFF; /* White for all text */
+  --twitter-accent: #1D9BF0; /* Twitter/X blue */
+  --twitter-accent-hover: #1871CA; /* Darker blue for hover */
+  --twitter-border: #2F3336; /* Subtle gray for borders */
+  --twitter-shadow: rgba(0, 0, 0, 0.3); /* Soft shadow */
+}
+
+.deepseek-widget {
+  background: var(--twitter-bg-secondary);
+  border-radius: 8px; /* Match Roadmap.css */
+  padding: 20px;
+  box-shadow: 0 2px 4px var(--twitter-shadow); /* Match Roadmap.css */
+  margin-bottom: 20px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--twitter-text);
+}
+
+.widget-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.widget-header h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--twitter-text);
+}
+
+.ai-icon {
+  font-size: 1.5rem;
+  color: var(--twitter-accent);
+  transition: transform 0.2s ease;
+}
+
+.ai-icon:hover {
+  transform: scale(1.2); /* Match resource-card micro-interaction */
+}
+
+.loading-state, .error-state, .empty-state {
+  text-align: center;
+  padding: 20px;
+  color: var(--twitter-text);
+  font-size: 1.1rem;
+}
+
+.loading-state p, .error-state p, .empty-state p {
+  margin: 10px 0;
+}
+
+.spinner {
+  font-size: 2rem;
+  color: var(--twitter-accent);
+  animation: spin 0.8s ease-in-out infinite, fade 0.8s ease-in-out infinite alternate;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fade {
+  0% { opacity: 1; }
+  100% { opacity: 0.7; }
+}
+
+.recommendations-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.recommendation-section {
+  background: var(--twitter-bg);
+  border-radius: 5px; /* Match Roadmap.css node styling */
+  padding: 15px;
+  border: 1px solid var(--twitter-border);
+  transition: box-shadow 0.2s ease;
+}
+
+.recommendation-section:hover {
+  box-shadow: 0 0 8px rgba(29, 155, 240, 0.2); /* Match Roadmap.css node hover */
+}
+
+.recommendation-section h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--twitter-text);
+  margin-bottom: 12px;
+}
+
+.recommendation-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.recommendation-section li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 8px 0;
+  font-size: 1rem;
+  color: var(--twitter-text);
+  transition: background-color 0.2s ease;
+}
+
+.recommendation-section li:hover {
+  background: rgba(29, 155, 240, 0.1); /* Subtle hover effect */
+}
+
+.bullet-icon {
+  font-size: 1rem;
+  color: var(--twitter-accent);
+  margin-top: 4px;
+  transition: transform 0.2s ease;
+}
+
+.bullet-icon:hover {
+  transform: scale(1.2);
+}
+
+.tutorial-section {
+  background: var(--twitter-bg);
+  border-radius: 5px;
+  padding: 20px;
+  border: 1px solid var(--twitter-border);
+  transition: box-shadow 0.2s ease;
+}
+
+.tutorial-section:hover {
+  box-shadow: 0 0 8px rgba(29, 155, 240, 0.2);
+}
+
+.tutorial-section h4 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--twitter-text);
+  margin-bottom: 15px;
+  background: linear-gradient(135deg, var(--twitter-accent) 0%, #17bfcb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tutorial-intro {
+  font-size: 1.1rem;
+  color: var(--twitter-text);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.tutorial-steps {
+  padding-left: 25px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: var(--twitter-text);
+}
+
+.tutorial-steps li {
+  margin-bottom: 12px;
+  line-height: 1.5;
+  position: relative;
+  padding-left: 12px;
+  transition: background-color 0.2s ease;
+}
+
+.tutorial-steps li::before {
+  content: counter(step);
+  counter-increment: step;
+  position: absolute;
+  left: -20px;
+  top: 2px;
+  font-size: 0.9rem;
+  color: var(--twitter-accent);
+  font-weight: 600;
+}
+
+.tutorial-steps li:hover {
+  background: rgba(29, 155, 240, 0.1);
+  border-radius: 4px;
+}
+
+.tutorial-conclusion {
+  font-size: 1.1rem;
+  color: var(--twitter-text);
+  font-style: italic;
+  line-height: 1.6;
+  padding-top: 10px;
+  border-top: 1px solid var(--twitter-border);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .deepseek-widget {
+    padding: 15px;
+  }
+
+  .widget-header h3 {
+    font-size: 1.3rem;
+  }
+
+  .recommendation-section h4 {
+    font-size: 1.2rem;
+  }
+
+  .tutorial-section h4 {
+    font-size: 1.3rem;
+  }
+
+  .tutorial-intro, .tutorial-steps, .tutorial-conclusion {
+    font-size: 0.95rem;
+  }
+
+  .tutorial-steps li {
+    padding-left: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .deepseek-widget {
+    padding: 12px;
+  }
+
+  .widget-header h3 {
+    font-size: 1.2rem;
+  }
+
+  .recommendation-section h4 {
+    font-size: 1.1rem;
+  }
+
+  .recommendation-section li {
+    font-size: 0.9rem;
+  }
+
+  .tutorial-section h4 {
+    font-size: 1.2rem;
+  }
+
+  .tutorial-intro, .tutorial-steps, .tutorial-conclusion {
+    font-size: 0.9rem;
+  }
+
+  .tutorial-steps {
+    padding-left: 20px;
+  }
+
+  .tutorial-steps li::before {
+    left: -15px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Counter for ordered list */
+.tutorial-steps {
+  counter-reset: step;
+}

@@ -1,0 +1,193 @@
+/* index.css */
+:root {
+  --twitter-bg: #15202B;
+  --twitter-bg-secondary: #1E2A38;
+  --twitter-text: #FFFFFF;
+  --twitter-text-secondary: #8899A6;
+  --twitter-accent: #1DA1F2;
+  --twitter-accent-hover: #1A91DA;
+  --twitter-border: #2F3E4A;
+  --twitter-shadow: rgba(0, 0, 0, 0.2);
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--twitter-bg);
+  color: var(--twitter-text);
+  font-family: var(--font-family);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.app {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: var(--twitter-bg);
+  min-height: 100vh;
+}
+
+.page-container {
+  margin: 0 auto;
+}
+
+/* Override Roadmap.css for Dark Theme */
+.roadmap-container {
+  background-color: var(--twitter-bg-secondary);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px var(--twitter-shadow);
+}
+
+.roadmap-header h1 {
+  color: var(--twitter-text);
+}
+
+.roadmap-description {
+  color: var(--twitter-text-secondary);
+}
+
+.back-button {
+  color: var(--twitter-accent);
+}
+
+.back-button:hover {
+  color: var(--twitter-accent-hover);
+}
+
+/* .search-input {
+  background-color: var(--twitter-bg);
+  border: 1px solid var(--twitter-border);
+  color: var(--twitter-text);
+}
+
+.search-input:focus {
+  border-color: var(--twitter-accent);
+}
+
+.search-icon {
+  color: var(--twitter-text-secondary);
+} */
+
+.roadmap-tree, .roadmap-resources {
+  background-color: var(--twitter-bg-secondary);
+}
+
+.roadmap-node {
+  color: var(--twitter-text);
+}
+
+.node-title {
+  color: var(--twitter-text);
+}
+
+.node-description {
+  color: var(--twitter-text-secondary);
+}
+
+.toggle-icon, .resource-icon {
+  color: var(--twitter-text-secondary);
+}
+
+.node-header:hover {
+  background-color: var(--twitter-bg);
+}
+
+.current {
+  border-left-color: var(--twitter-accent);
+}
+
+.loading-container p {
+  color: var(--twitter-text-secondary);
+}
+
+.spinner {
+  border-top-color: var(--twitter-accent);
+}
+
+/* Override DeepSeekWidget.css for Dark Theme */
+.deepseek-widget {
+  background-color: var(--twitter-bg-secondary);
+}
+
+.widget-header h3 {
+  color: var(--twitter-text);
+}
+
+.ai-icon, .bullet-icon {
+  color: var(--twitter-accent);
+}
+
+.loading-state p, .empty-state p {
+  color: var(--twitter-text-secondary);
+}
+
+.error-state {
+  color: #F4212E;
+}
+
+.recommendation-section h4 {
+  color: var(--twitter-text);
+}
+
+.recommendation-section li {
+  color: var(--twitter-text-secondary);
+}
+
+/* Override ResourceCard.css for Dark Theme */
+.resource-card {
+  background-color: var(--twitter-bg-secondary);
+}
+
+.resource-header {
+  color: var(--twitter-text);
+}
+
+.resource-type {
+  color: var(--twitter-text);
+}
+
+.resource-link {
+  color: var(--twitter-accent);
+}
+
+.resource-link:hover {
+  color: var(--twitter-accent-hover);
+}
+
+.resource-source, .resource-price {
+  color: var(--twitter-text-secondary);
+}
+
+.resource-icon {
+  color: var(--twitter-accent);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 15px;
+  }
+
+  .page-container {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: 10px;
+  }
+}

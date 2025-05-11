@@ -1,0 +1,294 @@
+/* Home.css */
+:root {
+  --twitter-bg: #15202B;
+  --twitter-bg-secondary: #1E2A38;
+  --twitter-text: #FFFFFF;
+  --twitter-text-secondary: #8899A6;
+  --twitter-accent: #1DA1F2;
+  --twitter-accent-hover: #1A91DA;
+  --twitter-border: #2F3E4A;
+  --twitter-shadow: rgba(0, 0, 0, 0.2);
+}
+
+.home-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--twitter-bg);
+  color: var(--twitter-text);
+}
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(180deg, var(--twitter-bg-secondary), var(--twitter-bg));
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 4px var(--twitter-shadow);
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--twitter-text);
+  margin-bottom: 15px;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: var(--twitter-text-secondary);
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+
+
+
+
+/* Override PracticeNowBanner for Twitter Theme */
+.practice-now-banner {
+  background-color: var(--twitter-bg-secondary);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 30px 0;
+  box-shadow: 0 2px 4px var(--twitter-shadow);
+}
+
+.practice-now-banner h3 {
+  color: var(--twitter-text);
+}
+
+.practice-now-banner p {
+  color: var(--twitter-text-secondary);
+}
+
+.practice-now-banner button {
+  background-color: var(--twitter-accent);
+  color: var(--twitter-text);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.practice-now-banner button:hover {
+  background-color: var(--twitter-accent-hover);
+}
+
+/* Trending Skills Section */
+.trending-section {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  color: var(--twitter-text);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-icon {
+  color: var(--twitter-accent);
+  font-size: 1.5rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.skill-card {
+  background-color: var(--twitter-bg-secondary);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 4px var(--twitter-shadow);
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px var(--twitter-shadow);
+}
+
+.skill-card h3 {
+  font-size: 1.3rem;
+  color: var(--twitter-text);
+  margin-bottom: 10px;
+}
+
+.skill-category {
+  font-size: 0.95rem;
+  color: var(--twitter-text-secondary);
+  margin-bottom: 5px;
+}
+
+.skill-growth {
+  font-size: 0.9rem;
+  color: #00FF88; /* Bright green for growth */
+}
+
+
+/* Success Stories Section */
+.stories-section {
+  margin-bottom: 40px;
+}
+
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.story-card {
+  background-color: var(--twitter-bg-secondary);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px var(--twitter-shadow);
+  transition: transform 0.2s;
+}
+
+.story-card:hover {
+  transform: translateY(-5px);
+}
+
+.story-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.avatar-placeholder {
+  width: 40px;
+  height: 40px;
+  background-color: var(--twitter-accent);
+  color: var(--twitter-text);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.story-header h4 {
+  font-size: 1.1rem;
+  color: var(--twitter-text);
+}
+
+.story-skill {
+  font-size: 0.9rem;
+  color: var(--twitter-text-secondary);
+}
+
+.story-project {
+  font-size: 0.95rem;
+  color: var(--twitter-text);
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.project-icon {
+  color: var(--twitter-accent);
+  margin-top: 2px;
+}
+
+/* How It Works Section */
+.how-it-works {
+  margin-bottom: 40px;
+}
+
+.steps-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.step {
+  background-color: var(--twitter-bg-secondary);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px var(--twitter-shadow);
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  background-color: var(--twitter-accent);
+  color: var(--twitter-text);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0 auto 10px;
+}
+
+.step h3 {
+  font-size: 1.2rem;
+  color: var(--twitter-text);
+  margin-bottom: 10px;
+}
+
+.step p {
+  font-size: 0.95rem;
+  color: var(--twitter-text-secondary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home-container {
+    padding: 15px;
+  }
+
+  .hero-section {
+    padding: 30px 15px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .skills-grid, .stories-grid, .steps-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-container {
+    padding: 10px;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .skill-card, .story-card, .step {
+    padding: 15px;
+  }
+}
+
+.skill-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

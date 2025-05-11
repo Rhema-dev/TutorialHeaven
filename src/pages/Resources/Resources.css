@@ -1,0 +1,295 @@
+/* Roadmap.css */
+:root {
+  --twitter-bg: #15202B;
+  --twitter-bg-secondary: #1E2A38;
+  --twitter-text: #FFFFFF; /* White for most text */
+  --twitter-text-input: #000000; /* Black for inputs and buttons */
+  --twitter-text-secondary: #8899A6;
+  --twitter-accent: #1DA1F2;
+  --twitter-accent-hover: #1A91DA;
+  --twitter-border: #2F3E4A;
+  --twitter-shadow: rgba(0, 0, 0, 0.2);
+}
+
+.roadmap-container {
+  max-width: 3000px; /* Increased from 800px for wider layout */
+  width: 90vw; /* Fallback for responsiveness */
+  margin: 0 auto;
+  padding: 30px; /* Increased padding for spacious feel */
+  background-color: var(--twitter-bg);
+  color: var(--twitter-text);
+}
+
+/* Header */
+.roadmap-header {
+  margin-bottom: 40px;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--twitter-bg-secondary);
+  color: var(--twitter-text-input); /* Black text */
+  border: 1px solid var(--twitter-border);
+  border-radius: 5px; /* 5px border radius */
+  padding: 10px 20px;
+  font-size: 1.1rem; /* Slightly larger */
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.back-button:hover {
+  background-color: var(--twitter-bg);
+  color: var(--twitter-accent);
+}
+
+.roadmap-header h1 {
+  font-size: 2.2rem; /* Increased for wider layout */
+  color: var(--twitter-text);
+  margin: 15px 0;
+}
+
+.roadmap-description {
+  font-size: 1.2rem; /* Slightly larger */
+  color: var(--twitter-text-secondary);
+}
+
+/* Search Container */
+.search-container {
+  margin-bottom: 30px;
+}
+
+/* Roadmap Content */
+.roadmap-content {
+  display: grid;
+  grid-template-columns: 2fr 3fr; /* Adjusted for wider layout: 40% tree, 60% resources */
+  gap: 30px; /* Increased gap for spaciousness */
+}
+
+.roadmap-tree {
+  background-color: var(--twitter-bg-secondary);
+  border-radius: 8px;
+  padding: 30px; /* Increased padding */
+  box-shadow: 0 2px 4px var(--twitter-shadow);
+}
+
+.roadmap-node {
+  margin-bottom: 20px;
+  padding-left: calc(25px * var(--depth, 0)); /* Adjusted for wider nodes */
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.roadmap-node:hover {
+  background-color: var(--twitter-bg);
+  border-radius: 5px;
+}
+
+.node-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+}
+
+.toggle-icon, .toggle-spacer {
+  width: 22px;
+  height: 22px;
+  color: var(--twitter-text-secondary);
+}
+
+.node-title {
+  font-size: 1.3rem; /* Increased for readability */
+  color: var(--twitter-text);
+  flex: 1;
+}
+
+.node-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.resource-icon {
+  color: var(--twitter-accent);
+  font-size: 1.1rem;
+}
+
+.node-description {
+  font-size: 1rem; /* Slightly larger */
+  color: var(--twitter-text-secondary);
+  margin: 8px 0 0 35px;
+}
+
+.node-children {
+  margin-top: 15px;
+}
+
+.current {
+  border-left: 4px solid var(--twitter-accent);
+  background-color: var(--twitter-bg);
+}
+
+/* Resources Section */
+.roadmap-resources {
+  background-color: var(--twitter-bg-secondary);
+  border-radius: 8px;
+  padding: 30px; /* Increased padding */
+  box-shadow: 0 2px 4px var(--twitter-shadow);
+}
+
+.current-topic-header h2 {
+  font-size: 1.8rem; /* Increased for wider layout */
+  color: var(--twitter-text);
+  margin-bottom: 15px;
+}
+
+.topic-description {
+  font-size: 1.1rem;
+  color: var(--twitter-text-secondary);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.description-icon {
+  color: var(--twitter-accent);
+  margin-top: 2px;
+}
+
+.select-topic-prompt {
+  text-align: center;
+  color: var(--twitter-text-secondary);
+  font-size: 1.1rem;
+  padding: 30px;
+}
+
+/* Loading State */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  color: var(--twitter-text-secondary);
+}
+
+.spinner {
+  width: 50px; /* Slightly larger for wider layout */
+  height: 50px;
+  border: 5px solid var(--twitter-bg-secondary);
+  border-top: 5px solid var(--twitter-accent);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Override PracticeNowBanner for Twitter Theme */
+.practice-now-banner {
+  background-color: var(--twitter-bg-secondary);
+  border-radius: 5px; /* 5px border radius */
+  padding: 25px; /* Increased padding */
+  margin-bottom: 25px;
+  box-shadow: 0 2px 4px var(--twitter-shadow);
+}
+
+.practice-now-banner h3 {
+  color: var(--twitter-text);
+  font-size: 1.4rem; /* Slightly larger */
+}
+
+.practice-now-banner p {
+  color: var(--twitter-text-secondary);
+  font-size: 1rem;
+}
+
+.practice-now-banner button {
+  background-color: var(--twitter-accent);
+  color: var(--twitter-text-input); /* Black text */
+  border: none;
+  border-radius: 5px; /* 5px border radius */
+  padding: 12px 25px; /* Increased padding */
+  cursor: pointer;
+  font-size: 1.1rem; /* Slightly larger */
+  transition: background-color 0.2s;
+}
+
+.practice-now-banner button:hover {
+  background-color: var(--twitter-accent-hover);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .roadmap-container {
+    width: 95vw;
+    padding: 20px;
+  }
+
+  .roadmap-content {
+    grid-template-columns: 1fr; /* Stack for smaller desktops */
+    gap: 20px;
+  }
+
+  .roadmap-tree, .roadmap-resources {
+    padding: 20px;
+  }
+
+  .roadmap-header h1 {
+    font-size: 2rem;
+  }
+
+  .back-button {
+    padding: 8px 15px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .roadmap-container {
+    padding: 15px;
+  }
+
+  .roadmap-tree, .roadmap-resources {
+    padding: 15px;
+  }
+
+  .node-title {
+    font-size: 1.2rem;
+  }
+
+  .node-description {
+    font-size: 0.95rem;
+  }
+
+  .current-topic-header h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .roadmap-container {
+    padding: 10px;
+  }
+
+  .roadmap-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .node-title {
+    font-size: 1.1rem;
+  }
+
+  .node-description {
+    font-size: 0.9rem;
+  }
+
+  .back-button {
+    padding: 6px 12px;
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,203 @@
+/* Use same variables as Roadmap.css and DeepSeekWidget.css */
+:root {
+  --twitter-bg: #0F1419; /* Deep black-gray */
+  --twitter-bg-secondary: #1A2028; /* Slightly lighter for panels */
+  --twitter-text: #FFFFFF; /* White for all text */
+  --twitter-accent: #1D9BF0; /* Twitter/X blue */
+  --twitter-accent-hover: #1871CA; /* Darker blue for hover */
+  --twitter-border: #2F3336; /* Subtle gray for borders */
+  --twitter-shadow: rgba(0, 0, 0, 0.3); /* Soft shadow */
+}
+
+.resource-card {
+  background: var(--twitter-bg-secondary);
+  border-radius: 8px; /* Match DeepSeekWidget */
+  padding: 20px;
+  box-shadow: 0 2px 4px var(--twitter-shadow); /* Match DeepSeekWidget */
+  margin-bottom: 20px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--twitter-text);
+  transition: box-shadow 0.2s ease;
+}
+
+.resource-card:hover {
+  box-shadow: 0 0 8px rgba(29, 155, 240, 0.2); /* Match DeepSeekWidget hover */
+}
+
+.resource-header {
+  font-size: 1.5rem; /* Match DeepSeekWidget widget-header */
+  font-weight: 700;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, var(--twitter-accent) 0%, #17bfcb 100%); /* Match tutorial-section h4 */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.resource-section {
+  background: var(--twitter-bg); /* Match DeepSeekWidget recommendation-section */
+  border-radius: 5px; /* Match DeepSeekWidget */
+  padding: 15px;
+  border: 1px solid var(--twitter-border);
+  margin-bottom: 20px;
+  transition: box-shadow 0.2s ease;
+}
+
+.resource-section:hover {
+  box-shadow: 0 0 8px rgba(29, 155, 240, 0.2); /* Match DeepSeekWidget */
+}
+
+.resource-type {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-size: 1.3rem; /* Match DeepSeekWidget recommendation-section h4 */
+  font-weight: 600;
+  color: var(--twitter-text);
+}
+
+.resource-icon {
+  font-size: 1.2rem;
+  transition: transform 0.2s ease;
+}
+
+.resource-icon:hover {
+  transform: scale(1.2); /* Match DeepSeekWidget bullet-icon */
+}
+
+.docs-icon {
+  color: #17BF63; /* Consistent with previous */
+}
+
+.free-icon {
+  color: #FF5555; /* Consistent with previous */
+}
+
+.paid-icon {
+  color: #A77EE6; /* Consistent with previous */
+}
+
+.resource-list {
+  list-style: none;
+  padding: 0;
+}
+
+.resource-item {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--twitter-border);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem; /* Match DeepSeekWidget recommendation-section li */
+  color: var(--twitter-text);
+  transition: background-color 0.2s ease;
+}
+
+.resource-item:hover {
+  background: rgba(29, 155, 240, 0.1); /* Match DeepSeekWidget recommendation-section li */
+}
+
+.resource-link {
+  color: var(--twitter-accent);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-grow: 1;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.resource-link:hover {
+  color: var(--twitter-accent-hover);
+  text-decoration: underline;
+}
+
+.external-icon {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  color: var(--twitter-text);
+  transition: transform 0.2s ease;
+}
+
+.external-icon:hover {
+  transform: scale(1.2); /* Match DeepSeekWidget icon hovers */
+}
+
+.resource-source {
+  color: var(--twitter-text);
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.resource-price {
+  background: linear-gradient(135deg, var(--twitter-accent) 0%, #17bfcb 100%);
+  padding: 4px 10px; /* Slightly larger for consistency */
+  border-radius: 999px; /* Pill-shaped, match DeepSeekWidget */
+  font-size: 0.9rem;
+  color: var(--twitter-text);
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.resource-price:hover {
+  transform: translateY(-1px); /* Match DeepSeekWidget button hover */
+  box-shadow: 0 2px 8px var(--twitter-shadow);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .resource-card {
+    padding: 15px;
+  }
+
+  .resource-header {
+    font-size: 1.3rem; /* Match DeepSeekWidget */
+  }
+
+  .resource-type {
+    font-size: 1.2rem;
+  }
+
+  .resource-icon {
+    font-size: 1rem;
+  }
+
+  .resource-section {
+    padding: 12px;
+  }
+
+  .resource-item {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .resource-card {
+    padding: 12px;
+  }
+
+  .resource-header {
+    font-size: 1.2rem;
+  }
+
+  .resource-type {
+    font-size: 1.1rem;
+  }
+
+  .resource-item {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 0.9rem;
+  }
+
+  .resource-link, .resource-source, .resource-price {
+    font-size: 0.85rem;
+  }
+
+  .resource-icon, .external-icon {
+    font-size: 0.9rem;
+  }
+}
